@@ -1,4 +1,4 @@
-# Optimal-detection
+# Optimal Detection
 
 The gas dispersion study is used to predict what happens if there is accidental gas leak. This study using CFD allows knowing specific details about the gas plumes. However, how can we take this information and obtain the best location for gas detectors?
 
