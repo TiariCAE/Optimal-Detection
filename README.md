@@ -5,7 +5,8 @@ The gas dispersion study is used to predict what happens if there is accidental 
 Using this code you can have the optimal location for these detectors. This means that will be necessary a minimum quantity of detectors to cover all possible cases of studied leakage.
 
 As input, you need to have a CSV archive as below:
-![image](https://user-images.githubusercontent.com/88203900/128052490-03cd3c1c-775c-4a1f-a814-389c423fe1d0.png)
+
+![image](https://user-images.githubusercontent.com/88203900/128054833-d792c825-6d9c-4d8d-ac8d-d72936986410.png)
 
 Each line means one point in the CFD domain which can be a gas detector location. In the columns, we have the coordinates (X, Y, and Z) and the gas mass fraction value. For example, if you are analyzing 20 possible points to locate the detector and there are 5 different leak cases (different gas sources, leakage direction, and/or wind directions), the CSV archive will have 20 * 5 = 100 lines because each case must be below the previous one.
 
