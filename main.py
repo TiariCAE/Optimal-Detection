@@ -73,6 +73,7 @@ case_names = []
 for i in cases:
     case_names.append('Case_{}'.format(i))
 print('\n All analyzed cases: \n', case_names)
+total_cases = case_names 
  
 # make an empty list to append the optimal points
 detection_point = [] 
@@ -109,20 +110,24 @@ while (count <= 1000) and (len(case_names) > 0):
     if sum(list_point_len_items) == 0:
         break 
     count += 1
+ 
+if len(case_names) == len(total_cases):
+    print("\n ATTENTION: No cases were detected by any point.")
+else:
 
-print("\n List of cases not detected by any point: ", case_names)
-print('\n The optimal detection points are: ', detection_point)
+    print("\n List of cases not detected by any point: ", case_names)
+    print('\n The optimal detection points are: ', detection_point)
 
-# make a data frame with the point's coordinates
-df_all_coord = pd.DataFrame() 
-for i in detection_point:    
-    # filter the df1 where Point_Number is an optimal point (i)                                         
-    df_coord = df1[df1["Point_Number"] == i].reset_index()
-    # add a line in df with the coordinates of point i
-    df_all_coord = df_all_coord.append(df_coord.iloc[0]) 
+    # make a data frame with the point's coordinates
+    df_all_coord = pd.DataFrame() 
+    for i in detection_point:    
+        # filter the df1 where Point_Number is an optimal point (i)                                         
+        df_coord = df1[df1["Point_Number"] == i].reset_index()
+        # add a line in df with the coordinates of point i
+        df_all_coord = df_all_coord.append(df_coord.iloc[0]) 
 
-# print only the relevant columns of the df with coordinates                        
-print('\n The coordinates of the optimal points are below. \n', df_all_coord[['Point_Number', 'X', ' Y ', ' Z ']])
+    # print only the relevant columns of the df with coordinates                        
+    print('\n The coordinates of the optimal points are below. \n', df_all_coord[['Point_Number', 'X', ' Y ', ' Z ']])
 
 
 
