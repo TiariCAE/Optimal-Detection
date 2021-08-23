@@ -8,6 +8,12 @@ As input, you need to have a CSV archive as below:
 
 ![image](https://user-images.githubusercontent.com/88203900/128054833-d792c825-6d9c-4d8d-ac8d-d72936986410.png)
 
-Each line means one point in the CFD domain which can be a gas detector location. In the columns, we have the coordinates (X, Y, and Z) and the gas mass fraction value. For example, if you are analyzing 20 possible points to locate the detector and there are 5 different leak cases (different gas sources, leakage direction, and/or wind directions), the CSV archive will have 20 * 5 = 100 lines because each case must be below the previous one.
+Each line means one point in the CFD domain which can be a gas detector location. In the columns, we have the coordinates (X, Y, and Z) and the gas mass fraction value. For example, if you are analyzing 20 possible points to locate the detector and there are 5 different leak cases (different gas sources, leakage direction, and/or wind directions), the CSV archive will have 20 * 5 = 100 lines because each case must be below the previous one. Pay attention to putting the title of this table (the first line) with the same white spaces between the letters that the example above.
 
-Regarding input data, there are three data that you need to change in the code: the number of cases, the number of points, and the mass fraction value that you want to detect. Follow the comments in the code to find where to put this information.
+This archive must be named "export.csv" and must be in the "data" folder.
+
+Regarding input data, there are three data that you need to change in the code: the number of cases, the number of points, and the mass fraction value that you want to detect. Follow the questions that appear on the terminal to enter this information.
+
+
+
+
