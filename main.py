@@ -67,7 +67,9 @@ for i in points:
         }
     list_points.append(list_cases)
     point_name.append(i)
-  
+    df2 = df2.append(item_pcd, ignore_index=True)
+df2.to_excel('All_Cases.xlsx', index = False)
+
 # make a list with the name of all cases
 case_names = []
 for i in cases:
@@ -129,10 +131,7 @@ else:
     # print only the relevant columns of the df with coordinates                        
     print('\n The coordinates of the optimal points are below. \n', df_all_coord[['Point_Number', 'X', ' Y ', ' Z ']])
 
-
-
-
-
+print("\n To find the cases detected by each point, oppen the archive All_Cases.xlsx .")
 
 
 
